@@ -1,0 +1,77 @@
+CRITICAL - 2022-06-03 04:34:49 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 C:\xampp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 C:\xampp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\xampp\htdocs\lab11_ci\ci4\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\xampp\htdocs\lab11_ci\ci4\public\index.php(28): require('C:\\xampp\\htdocs...')
+#4 {main}
+CRITICAL - 2022-06-03 04:34:56 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 C:\xampp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 C:\xampp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\xampp\htdocs\lab11_ci\ci4\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\xampp\htdocs\lab11_ci\ci4\public\index.php(28): require('C:\\xampp\\htdocs...')
+#4 {main}
+CRITICAL - 2022-06-03 04:37:47 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 C:\xampp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 C:\xampp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\xampp\htdocs\lab11_ci\ci4\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\xampp\htdocs\lab11_ci\ci4\public\index.php(28): require('C:\\xampp\\htdocs...')
+#4 {main}
+CRITICAL - 2022-06-03 04:38:50 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 C:\xampp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 C:\xampp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\xampp\htdocs\lab11_ci\ci4\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\xampp\htdocs\lab11_ci\ci4\public\index.php(28): require('C:\\xampp\\htdocs...')
+#4 {main}
+CRITICAL - 2022-06-03 04:39:04 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 C:\xampp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 C:\xampp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\xampp\htdocs\lab11_ci\ci4\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\xampp\htdocs\lab11_ci\ci4\public\index.php(28): require('C:\\xampp\\htdocs...')
+#4 {main}
+CRITICAL - 2022-06-03 04:39:34 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 C:\xampp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 C:\xampp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\xampp\htdocs\lab11_ci\ci4\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\xampp\htdocs\lab11_ci\ci4\public\index.php(28): require('C:\\xampp\\htdocs...')
+#4 {main}
+CRITICAL - 2022-06-03 04:40:46 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 C:\xampp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 C:\xampp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\xampp\htdocs\lab11_ci\ci4\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\xampp\htdocs\lab11_ci\ci4\spark(45): require('C:\\xampp\\htdocs...')
+#4 {main}
+CRITICAL - 2022-06-03 04:41:46 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 C:\xampp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 C:\xampp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\xampp\htdocs\lab11_ci\ci4\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\xampp\htdocs\lab11_ci\ci4\spark(45): require('C:\\xampp\\htdocs...')
+#4 {main}
+CRITICAL - 2022-06-03 02:25:38 --> Invalid file: home.php
+#0 C:\xampp\htdocs\lab11_ci\ci4\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home.php')
+#1 C:\xampp\htdocs\lab11_ci\ci4\system\Common.php(1089): CodeIgniter\View\View->render('home', Array, true)
+#2 C:\xampp\htdocs\lab11_ci\ci4\app\Controllers\page.php(9): view('home', Array)
+#3 C:\xampp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(832): App\Controllers\Page->home()
+#4 C:\xampp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#5 C:\xampp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\lab11_ci\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\lab11_ci\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-06-03 02:28:50 --> Call to undefined method CodeIgniter\Router\Router::include()
+#0 C:\xampp\htdocs\lab11_ci\ci4\system\Router\Router.php(518): include_once()
+#1 C:\xampp\htdocs\lab11_ci\ci4\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('rumah')
+#2 C:\xampp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('rumah')
+#3 C:\xampp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#4 C:\xampp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\lab11_ci\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\lab11_ci\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-06-03 02:36:55 --> Invalid file: contact.php
+#0 C:\xampp\htdocs\lab11_ci\ci4\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('contact.php')
+#1 C:\xampp\htdocs\lab11_ci\ci4\system\Common.php(1089): CodeIgniter\View\View->render('contact', Array, true)
+#2 C:\xampp\htdocs\lab11_ci\ci4\app\Controllers\page.php(27): view('contact', Array)
+#3 C:\xampp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(832): App\Controllers\Page->contact()
+#4 C:\xampp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+#5 C:\xampp\htdocs\lab11_ci\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\lab11_ci\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\lab11_ci\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
