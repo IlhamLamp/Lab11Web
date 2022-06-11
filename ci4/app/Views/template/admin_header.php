@@ -10,13 +10,12 @@
     <body>
         <div id="container">
             <header>
-                <h1>Portal Berita</h1>
+                <h1>Admin Portal Berita</h1>
             </header>
             <nav>
-                <a href="<?= base_url('/');?>" class="active">Home</a>
+                <a href="<?= base_url('/admin_index');?>" class="active">Dashboard</a>
                 <a href="<?= base_url('/artikel');?>">Artikel</a>
-                <a href="<?= base_url('/about');?>">About</a>
-                <a href="<?= base_url('/contact');?>">Kontak</a>
+                <a href="<?= base_url('/add');?>">Tambah Artikel</a>
             </nav>
             <section id="wrapper">
                 <section id="main">

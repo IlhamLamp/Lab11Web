@@ -1,4 +1,4 @@
-# LAB11 PHP Framework (Codeigniter)
+# LAB11
 
 <table border="2" cellpading="10">
   <tr>
@@ -17,9 +17,14 @@
     <td><b>MataKuliah</b></td>
     <td>Pemrograman Web</td>
   </tr>
+  <tr>
+    <td><b>Praktikum</b></td>
+    <td><a href="#p11">11</a>,<a href="#p12">12</a></td>
 </table>
 
-# <b>Praktikum</b>
+<div id="p11">
+
+# <spaan style="color: blue">Praktikum 11 | PHP Framework (Codeigniter)</span>
 
 ## 1. Konfigurasi Webserver
 - Mengaktifkan ekstensi melalui Xampp, bagian ``Apache > Config > PHP(php.ini)``, Hilangkan `;`.<br>
@@ -105,7 +110,7 @@
     ```
 
 - Karena belum ada pada routing, sehingga mengaksesnya menggunakan ``http://localhost:8080/page/tos``.<br>
-![img14](img-git/13-page-tos.png)
+![img13-2](img-git/13-page-tos.png)
 <br>
 
 ## 8. Membuat View
@@ -127,31 +132,31 @@
     <br>
 
 - Ubah method `about` pada Controllers page.<br>
-![img15](img-git/14-about.png)
+![img14](img-git/14-about.png)
 <br>
 
 - Refresh halaman tersebut.<br>
-![img16](img-git/15-aboutv.png)
+![img15](img-git/15-aboutv.png)
 <br>
 
 ## 9. Layout dengan CSS
 - Terletak di ``public/style.css``<br>
-![img17](img-git/16-css-layout.PNG)
+![img16](img-git/16-css-layout.PNG)
 <br>
 
 ## 10. Template
 - Pada direktori Views, Buat foler `template`, isi dengan file
 
 - ``header.php``
-![img18](img-git/17-header-t.PNG)
+![img17](img-git/17-header-t.PNG)
 <br>
 
 - ``footer.php``
-![img19](img-git/18-footer-t.PNG)
+![img18](img-git/18-footer-t.PNG)
 <br>
 
 - Tampilan template.
-![img20](img-git/19-about-v.PNG)
+![img19](img-git/19-about-v.PNG)
 
 
 # Tugas
@@ -159,7 +164,7 @@
 
 ### Jawaban 
 - Ubah isi pada ``Routes.php`` menjadi berikut,<br>
-![img21](img-git/20-routes.PNG)
+![img20](img-git/20-routes.PNG)
 <br>
 
 - Pada ``Controllers/page.php``, menjadi berikut
@@ -235,25 +240,228 @@
 
 - Berikut Tampilannya,
 - ``rumah.php``
-![img22](img-git/21-rumah.PNG)
+![img21](img-git/21-rumah.PNG)
 <br>
 
 - ``artikel.php``
-![img23](img-git/22-artikel.PNG)
+![img22](img-git/22-artikel.PNG)
 <br>
 
 - ``about.php``
-![img24](img-git/23-about.PNG)
+![img23](img-git/23-about.PNG)
 <br>
 
 - ``kontak.php``
-![img25](img-git/24-kontak.PNG)
+![img24](img-git/24-kontak.PNG)
 <br>
 
 - ``faqs.php``
-![img26](img-git/25-FAQ.PNG)
+![img25](img-git/25-FAQ.PNG)
 <br>
 
 - ``tos.php``
-![img27](img-git/26-TOS.PNG)
+![img26](img-git/26-TOS.PNG)
 <br>
+</div>
+
+<div id="p12">
+
+# <span style="color: blue">Praktikum 12 | Framework Lanjutan (CRUD)</span>
+
+## 1. Database
+- Jalankan ``Apache, MySql`` pada Xampp, Buat database dengan nama ``lab_ci4`` di http://localhost/phpmyadmin.
+- Buat tabel dengan nama ``artikel``.
+    ```sql
+    CREATE TABLE artikel (
+        id INT(11) auto_increment,
+        judul VARCHAR(200) NOT NULL,
+        isi TEXT,
+        gambar VARCHAR(200),
+        status TINYINT(1) DEFAULT 0,
+        slug VARCHAR(200),
+        PRIMARY KEY(id)
+    );
+    ```
+![img27](img-git/27-db.png)
+<br>
+
+## 2. Konfigurasi Koneksi Database
+- Terletak di folder ``ci4``, file `.env`, Hapus tanda `#`.
+![img28](img-git/28-db.png)
+<br>
+
+## 3. Membuat Model 
+- Terletak di folder `app/Models`, buat file `ArtikelModel.php`.
+![img29](img-git/29-artikelm.png)
+<br>
+
+## 4. Membuat Controller 
+- Terletak di folder `app/Controllers`, buat file `Artikel.php`.
+![img30](img-git/30-artikelm.png)
+<br>
+
+## 5. Membuat View pada artikel 
+- Terletak di folder `app/Views/artikel`, buat file `index.php`.
+![img31](img-git/31-index.png)
+<br>
+
+- Buka browser, ketik http://localhost:8080/artikel 
+![img32](img-git/32-index-nd.PNG)
+<br>
+
+- Masukkan data ke tabel artikel,
+    ```sql
+    INSERT INTO artikel (judul, isi, slug) VALUE
+    ('Artikel pertama', 'Lorem Ipsum adalah contoh teks atau dummy dalam industri 
+    percetakan dan penataan huruf atau typesetting. Lorem Ipsum telah menjadi 
+    standar contoh teks sejak tahun 1500an, saat seorang tukang cetak yang tidak 
+    dikenal mengambil sebuah kumpulan teks dan mengacaknya untuk menjadi sebuah 
+    buku contoh huruf.', 'artikel-pertama'), 
+    ('Artikel kedua', 'Tidak seperti anggapan banyak orang, Lorem Ipsum bukanlah 
+    teks-teks yang diacak. Ia berakar dari sebuah naskah sastra latin klasik dari 
+    era 45 sebelum masehi, hingga bisa dipastikan usianya telah mencapai lebih 
+    dari 2000 tahun.', 'artikel-kedua');
+    ``` 
+![img33](img-git/33-dbartikel.PNG)
+<br>
+
+- Refresh kembali browser.
+![img34](img-git/34-artikel.png)
+<br>
+
+## 6. Membuat Tampilan detail Artikel
+- Terletak di folder `app/Controllers`, edit file `Artikel.php`. Tambah method ``view()``.
+![img35](img-git/35-view.png)
+<br>
+
+## 7. Membuat View pada Detail
+- Terletak di folder `app/Views/artikel`, buat file `detail.php`.
+![img36](img-git/36-detail.png)
+<br>
+
+## 8. Membuat Routing untuk artikel detail
+- Terletak di folder `app/Config`, edit file `Routes.php`.
+![img36-2](img-git/36-routes.png)
+<br>
+
+- Klik `Artikel Kedua` pada http://localhost:8080/artikel, untuk pindah ke detailnya.
+![img37](img-git/37-artikel2.png)
+<br>
+
+## 9. Membuat Menu admin
+- Terletak di folder `app/Controller`, edit file `Artikel.php`. Tambah method `admin_index()`.
+![img38](img-git/38-admin-index.png)
+<br>
+
+- Selanjutnya, akses kembali folder `app/Views/artikel`, buat file `admin_index.php`.
+    ```php
+    <?= $this->include('template/admin_header'); ?>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr class="table-primary">
+                <th scope="col">ID</th>
+                <th scope="col">Judul</th>
+                <th scope="col">Status</th>
+                <th scope="col">Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php if($artikel): foreach($artikel as $row): ?>
+            <tr>
+                <td><?= $row['id']; ?></td>
+                <td>
+                    <b><?= $row['judul']; ?></b>
+                    <p><small><?= substr($row['isi'], 0, 50); ?></small></p>
+                </td>
+                <td><?= $row['status']; ?></td>
+                <td>
+                    <a class="btn btn-primary p-1" href="<?= base_url('/admin/artikel/edit/' . 
+                    $row['id']);?>">Ubah</a>
+                    <a class="btn btn-danger p-1" onclick="return confirm('Yakin menghapus data?');" href="<?= base_url('/admin/artikel/delete/' . 
+                    $row['id']);?>">Hapus</a>
+                </td>
+            </tr>
+            <?php endforeach; else: ?>
+            <tr>
+                <td colspan="4">Belum ada data.</td>
+            </tr>
+            <?php endif; ?>
+        </tbody>
+        <tfoot>
+            <tr class="table-primary">
+                <th scope="col">ID</th>
+                <th scope="col">Judul</th>
+                <th scope="col">Status</th>
+                <th scope="col">Aksi</th>
+            </tr>
+        </tfoot>
+    </table>
+    <?= $this->include('template/admin_footer'); ?>
+    ```
+<br>
+
+- Buka folder yang ada di ``app/Views/artikel/template``, kemudian buat:
+- ``admin_header.php``,
+![img38-1](img-git/38-admin-header.PNG)
+<br>
+
+- ``admin_footer.php``
+![img38-2](img-git/38-admin-footer.PNG)
+<br>
+
+## 10. Membuat Routing untuk menu admin
+- Terletak di folder `app/Config`, edit file `Routes.php`.
+![img39](img-git/39-routes.png)
+<br>
+
+- Akses browser dengan http://localhost:8080/admin/artikel.
+![img40](img-git/40-admin-artikel.png)
+<br>
+
+## 11. Menambah data untuk Artikel
+- Terletak di folder `app/Controller`, edit file `Artikel.php`. Tambah method `add()`.
+![img41](img-git/41-add.png)
+<br>
+
+- Akses kembali folder `app/Views/artikel`, buat file `form_add.php`.
+![img42](img-git/42-form-add.png)
+<br>
+
+- Akses browser dengan http://localhost:8080/admin/artikel/add.
+![img43](img-git/43-portal-add.PNG)
+<br>
+
+## 12. Mengubah data pada Artikel
+- Terletak di folder `app/Controller`, edit file `Artikel.php`. Tambah method `edit()`.
+![img44](img-git/44-edit.png)
+<br>
+
+- Akses kembali folder `app/Views/artikel`, buat file `form_edit.php`.
+![img45](img-git/45-form-edit.png)
+<br>
+
+- Akses browser dengan http://localhost:8080/admin/artikel/edit/1 untuk Mengubah artikel pertama.
+![img46](img-git/46-portal-edit.PNG)
+<br>
+
+## 13. Menghapus data pada Artikel
+- Terletak di folder `app/Controller`, edit file `Artikel.php`. Tambah method `delete()`.
+![img47](img-git/47-del.png)
+<br>
+
+- Akses browser dengan http://localhost:8080/admin/artikel/add untuk membuat artikel ketiga, lalu `kirim`.
+![img48](img-git/48-add-3.png)
+<br>
+
+- Untuk mengeceknya ketik di url, http://localhost:8080/artikel kemudian enter.
+![img49](img-git/49-artikel.PNG)
+<br>
+
+- Pergi ke menu admin untuk menghapusnya, http://localhost:8080/admin/artikel, kemudian pilih `hapus`.
+![img50](img-git/50-admin-art.PNG)
+<br>
+
+- Artikel berhasil dihapus.
+![img51](img-git/51-artikel-deleted.PNG)
+<br>
+</div>

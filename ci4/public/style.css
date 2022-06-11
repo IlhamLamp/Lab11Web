@@ -48,6 +48,11 @@ nav a {
     font-weight: bold;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 nav a.active, nav a:hover {
     background-color: #2b83ea;
 }
