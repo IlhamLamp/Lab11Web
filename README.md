@@ -19,7 +19,7 @@
   </tr>
   <tr>
     <td><b>Praktikum</b></td>
-    <td><a href="#p11">11</a>,<a href="#p12">12</a></td>
+    <td><a href="#p11">11</a>,<a href="#p12">12</a>,<a href="#p13">13</a></td>
 </table>
 
 <div id="p11">
@@ -464,4 +464,127 @@
 - Artikel berhasil dihapus.
 ![img51](img-git/51-artikel-deleted.PNG)
 <br>
+</div>
+
+<div id="p13">
+
+# <span style="color: blue">Praktikum 13 | Framework Lanjutan (Modul Login)</span>
+
+## 1. Membuat Table User
+- Jalankan ``Apache, MySql`` pada Xampp, Akses browser http://localhost/phpmyadmin.
+- Buat tabel dengan nama ``artikel``.
+    ```sql
+        CREATE TABLE user (
+        id INT(11) auto_increment,
+        username VARCHAR(200) NOT NULL,
+        useremail VARCHAR(200),
+        userpassword VARCHAR(200),
+        PRIMARY KEY(id)
+        );
+    ```
+![img52](img-git/52-table-user.PNG)
+<br>
+
+## 2. Membuat Model User
+- Terletak di folder `app/Models`, buat file `UserModel.php`.
+![img53](img-git/53-user-model.png)
+<br>
+
+## 3. Membuat Controller User
+- Terletak di folder `app/Controllers`, buat file `User.php`.
+![img54](img-git/54-user-controller.png)
+<br>
+
+## 4. Membuat View Login
+- Terletak di folder `app/Views`, buat folder baru dengan nama `user`, buat file `User.php` di dalamnya.
+![img55](img-git/55-login.png)
+<br>
+
+## 5. Membuat Database Seeder
+- Untuk keperluan uji coba.
+- Masuk ke direktori ci4, kemudian ketikkan kode:
+``php spark make:seeder UserSeeder``
+![img56](img-git/56-spark-seeder.png)
+<br>
+
+- Terletak di folder `app/Database/Seeds`, buka file `UserSeeder.php`, kemudian edit menjadi berikut:
+![img57](img-git/57-user-seeder.png)
+<br>
+
+- Buka kembali CLI, kemudian ketik perintah berikut:
+``php spark db:seed UserSeeder``
+![img58](img-git/58-db-seeder.png)
+<br>
+
+- Berikut data yang sudah ditambah pada tabel `user`. Dengan mengakses ``http://localhost/phpmyadmin``.
+![img59](img-git/59-berhasilditambah.PNG)
+<br>
+
+- Akses url ``http://localhost:8080/user/login``, menampilkan error:
+![img60](img-git/59-localhost.error.PNG)
+<br>
+
+- Buka file `.env`, kemudian hapus `#` pada `app.sessionX`
+![img61](img-git/59-env.png)
+<br>
+
+- Akses kembali url ``http://localhost:8080/user/login``
+![img62](img-git/59-login.PNG)
+<br>
+
+## 6. Menambah Auth Filter
+- Terletak di folder `app/Filters`, buat file `Auth.php`
+![img63](img-git/60-auth.png)
+<br>
+
+- Kemudian pada folder `app/Config`, edit isi file `Filters.php` menjadi berikut:
+![img64](img-git/61-filters.png)
+<br>
+
+- Juga berikut
+![img65](img-git/62-routes-filters.png)
+<br>
+
+- Untuk mencobanya, akses ``http://localhost:8080/artikel``, kemudian tambah menjadi ``http://localhost:8080/admin/artikel`` lalu tekan enter.
+![img66](img-git/62-test-login.png)
+<br>
+
+- Otomatis akan dialihkan untuk login terlebih dahulu.
+![img67](img-git/62-disable.PNG)
+<br>
+
+- Mencoba masuk dengan email `admin@email.com`, dan password `admin123`, kemudian tekan `login`.
+![img68](img-git/62-proses-login.PNG)
+<br>
+
+- Berhasil masuk sebagai admin, dan semua menu dapat diakses.Untuk mencobanya klik menu `Artikel`.
+![img69](img-git/62-admin-user.png)
+<br>
+
+- Kemudian klik menu `Login Admin`, untuk diarahkan ke ``http://localhost:8080/admin/artikel``.
+![img70](img-git/62-relog.png)
+<br>
+
+- Maka akan masuk ke menu admin sebelumnya, tidak login ulang.
+![img71](img-git/62-done.png)
+<br>
+
+## 7. Membuat Fungsi Logout
+- Menambah method logout().
+- Terletak di folder `app/Controllers`, buka file `User.php`, kemudian edit menjadi berikut:
+![img72](img-git/63-logout.png)
+<br>
+
+- Untuk mencobanya, klik menu `Logout`.
+![img73](img-git/62-done.png)
+<br>
+
+- Maka akan langsung diarahkan untuk login ulang, sebelum bisa mengakses menu admin.
+![img74](img-git/63-logout-login.PNG)
+<br>
+
+- Namun, untuk ``http://localhost:8080/artikel`` masih dapat diakses.
+![img75](img-git/64-artikel.png)
+<br>
+
 </div>

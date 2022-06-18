@@ -31,16 +31,20 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+
+$routes->get('/', 'Artikel::index');
 $routes->get('/about', 'Page::about');
-$routes->get('/artikel/(:any)', 'Artikel::view/$1');
+$routes->get('/logout', 'User::logout');
+
+
 $routes->group('admin', function($routes) {
     $routes->get('artikel', 'Artikel::admin_index');
     $routes->add('artikel/add', 'Artikel::add');
     $routes->add('artikel/edit/(:any)', 'Artikel::edit/$1');
     $routes->get('artikel/delete/(:any)', 'Artikel::delete/$1');
-    });
-    
+});
+
+$routes->get('/artikel/(:any)', 'Artikel::view/$1');
 $routes->get('/faqs', 'Page::faqs');
 $routes->get('/tos', 'Page::tos');
 
