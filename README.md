@@ -496,7 +496,7 @@
 <br>
 
 ## 4. Membuat View Login
-- Terletak di folder `app/Views`, buat folder baru dengan nama `user`, buat file `User.php` di dalamnya.
+- Terletak di folder `app/Views`, buat folder baru dengan nama `user`, buat file `login.php` di dalamnya.
 ![img55](img-git/55-login.png)
 <br>
 
