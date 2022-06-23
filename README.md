@@ -636,7 +636,7 @@
 - Akses kembali ``http://localhost:8080/admin/artikel``. Kemudian ketik artikel yang akan di cari, selanjutnya tekan `cari`.
 
 - Proses mencari artikel PHP,
-![img85](img-git/72-php-s.PNG)
+![img85](img-git/72-php-s.png)
 <br>
 
 - Artikel ditemukan.
