@@ -19,7 +19,7 @@
   </tr>
   <tr>
     <td><b>Praktikum</b></td>
-    <td><a href="#p11">11</a>,<a href="#p12">12</a>,<a href="#p13">13</a></td>
+    <td><a href="#p11">11</a>,<a href="#p12">12</a>,<a href="#p13">13</a>,<a href="#p14">14</a></td>
 </table>
 
 <div id="p11">
@@ -585,6 +585,91 @@
 
 - Namun, untuk ``http://localhost:8080/artikel`` masih dapat diakses.
 ![img75](img-git/64-artikel.png)
+<br>
+
+</div>
+
+<div id="p14">
+
+# <span style="color: blue">Praktikum 14 | Pagination dan Pencarian</span>
+
+## 1. Membuat Pagination
+- Terletak di folder ``app/Controllers``, buka file `Artikel.php`. Ubah menjadi berikut :
+![img76](img-git/66-artikel.png)
+<br>
+
+- Terletak di folder ``app/Views/artikel``, buka file `admin_index.php`, tambah kode berikut : ``<?= $pager->links(); ?>``
+![img77](img-git/67-pagination.png)
+<br>
+
+- Kemudian buka browser, akses ``http://localhost:8080/admin/artikel``
+![img78](img-git/65-env-error.PNG)
+<br>
+
+- Buka kembali teks editor (VScode), ubah isi file `.env` menjadi berikut :
+![img79](img-git/65-env-null.png)
+<br>
+
+- Akses kembali ``http://localhost:8080/admin/artikel``. Menampilkan artikel maksimal 4 per halaman.
+
+- Halaman 1
+![img80](img-git/68-pagination-v.png)
+<br>
+
+- Halaman 2
+![img81](img-git/68-pagination-v2.PNG)
+<br>
+
+## 2. Membuat Pencarian
+- Terletak di folder ``app/Controllers``, buka file `Artikel.php`. Ubah menjadi berikut :
+![img82](img-git/69-search.png)
+<br>
+
+- Terletak di folder ``app/Views/artikel``, buka file `admin_index.php`. Ubah menjadi berikut :
+![img83](img-git/70-admin-ind.png)
+<br>
+
+- Juga berikut :
+![img84](img-git/71-pager.png)
+<br>
+
+- Akses kembali ``http://localhost:8080/admin/artikel``. Kemudian ketik artikel yang akan di cari, selanjutnya tekan `cari`.
+
+- Proses mencari artikel PHP,
+![img85](img-git/72-php-s.PNG)
+<br>
+
+- Artikel ditemukan.
+![img86](img-git/72-php-f.PNG)
+<br>
+
+## 3. Upload Gambar
+- Terletak di folder ``app/Controllers``, buka file `Artikel.php`. Ubah menjadi berikut :
+![img87](img-git/73-upload.png)
+<br>
+
+- Terletak di folder ``app/Views/artikel``, buka file `form_add.php`. Ubah menjadi berikut :
+![img88](img-git/74-form-add.png)
+<br>
+
+- Akses kembali ``http://localhost:8080/admin/artikel``. Kemudian pilih menu `Tambah Artikel`
+![img89](img-git/74-form-add-v.png)
+<br>
+
+- Akses kembali ``http://localhost:8080/admin/artikel``. Kemudian pilih menu `Tambah Artikel`.
+![img90](img-git/74-form-add-v.png)
+<br>
+
+- Lalu isi artikel dan pilih gambar.
+![img91](img-git/74-form-add-v-e.png)
+<br>
+
+- Otomatis diarahkan kembali ke menu admin. Pilih halaman ke-3 (terakhir ditambah). Untuk melihat tampilannya, tekan menu ``artikel``.
+![img92](img-git/75-added.png)
+<br>
+
+- Berikut tampilannya.
+![img93](img-git/75-added-m.png)
 <br>
 
 </div>
